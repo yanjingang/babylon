@@ -208,7 +208,7 @@ using ConcurrentMiner = GenericsConcurrentMiner<ssize_t>;
 class ConcurrentSummer {
  public:
   // 计数结果二元组，总和&总量
-  struct Summary {
+  struct alignas(BABYLON_CACHELINE_SIZE) Summary {
     ssize_t sum;
     size_t num;
   };
