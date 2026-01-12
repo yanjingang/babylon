@@ -5,7 +5,7 @@ project(babylon VERSION 1.4.4)
 include(CTest)                      # for BUILD_TESTING option
 include(CMakePackageConfigHelpers)  # for write_basic_package_version_file
 
-option(BUILD_DEPS "Use FetchContent download and build dependencies" OFF)
+option(BUILD_DEPS "Use FetchContent download and build dependencies" ON)
 
 if(BUILD_TESTING AND CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR)
   set(CMAKE_CXX_STANDARD 20)
